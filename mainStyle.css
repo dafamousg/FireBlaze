@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: darkgray;
+}
+
+
+.header{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    height: 60px;
+    background: black;
+}
+
+.logo{
+    color: whitesmoke;
+    float: left;
+    width: 200px;
+    font-size: 40px;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO15FEvJQcnmmM6uDNqlBB6HOh5rD9mI4wdQ&usqp=CAU");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    margin: 5px;
+}
+
+.navContainer{
+    float: left;
+}
+.navMenu{
+    font-family: cursive;
+    font-size: 25px;
+    text-align: center;
+    margin: 12px;
+}
+.navMenu a{
+    position: relative;
+    display: inline-block;
+    color: whitesmoke;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    margin: 0 20px;
+
+}
+.navMenu a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.navMenu a:after {    
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.navMenu a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+.navMenu .icon{
+    display: none;
+}
+.navMenu .icon:hover:after {
+    width: 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .navMenu a {
+        display: none;
+        padding: 10px 20px;
+        margin: 0;
+    }
+    .navMenu a.icon {
+      float: left;
+      display: block;
+    }
+    nav{
+        text-align: center;
+    }
+    .logo{
+        display: inline-block;
+        position: relative;
+        float: none;
+        z-index: 1;
+    }
+    .navMenu {
+        margin: 0;
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .navMenu.responsive {
+        position: relative;
+        left: 0;
+        margin: 0;
+        /* width: 100vw; */
+    }
+    .navContainer{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        width: auto;
+    }
+    .navContainer.responsive .icon {
+      position: fixed;
+    }
+    .navMenu.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+      background: black;
+      /* max-height: 20vh; */
+    }
+  }

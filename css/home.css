@@ -1,0 +1,11 @@
+.mainFlow{
+    text-align: center;
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.mainFlow img{
+    width: 70%;
+    height: 60%;
+}
