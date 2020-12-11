@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.row{
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.artist{
+    margin-top: 40px;
+    background-color: blue;
+}
+
+.artist .col-1, .col-2, .col-3{
+    float: left;
+    height: 200px;
+    background-color: pink;
+}
+
+.col-1{
+    width: 20%;
+}
+
+.col-2{
+    width: 60%;
+}
+.col-2 * {
+    position: relative;
+    top: 25%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.header-Info span{
+    border-left: 1px solid black;
+    margin-right: 10px;
+    padding: 0 10px;
+}
+
+.col-3{
+    width: 20%;
+}
+.col-3 * {
+    position: relative;
+    top: 25%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
