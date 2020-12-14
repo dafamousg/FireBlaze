@@ -4,30 +4,22 @@
     box-sizing: border-box;
 }
 
-.row{
+.container{
     width: 80%;
-    position: relative;
     margin: 0 auto;
 }
-
 .artist{
-    margin-top: 40px;
-    background-color: blue;
+    overflow: hidden;
+    margin: 40px 0;
+    /* padding: 40px 10%;
+    border-bottom: 1px solid gray; */
 }
-
 .artist .col-1, .col-2, .col-3{
     float: left;
     height: 200px;
     background-color: pink;
 }
-
-.col-1{
-    width: 20%;
-}
-
-.col-2{
-    width: 60%;
-}
+.col-1{width: 20%;} .col-2{width: 60%;} .col-3{width: 20%;}
 .col-2 * {
     position: relative;
     top: 25%;
@@ -39,13 +31,12 @@
     margin-right: 10px;
     padding: 0 10px;
 }
-
-.col-3{
-    width: 20%;
-}
 .col-3 * {
     position: relative;
     top: 25%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+
+
