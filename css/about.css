@@ -38,5 +38,16 @@
     transform: translateY(-50%);
 }
 
+.video{
+    overflow: hidden;
+    border: 1px solid black;
+    margin: 5px;
+}
+.video div {
+    display: inline-block;
+}
+.video .img{
+    float: left;
+}
 
 
