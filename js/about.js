@@ -1,6 +1,6 @@
 
-    var key = [API-KEY];
-    var url = 'https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UUdl8T8PPHJf141WYCXJK1Lg'+key;
+    var key = '&key=AIzaSyC8S4eoB4ncNKj-aF9FAMzn2xLhsCqfjIA';
+    var url = 'https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&maxResults=50&playlistId=UUdl8T8PPHJf141WYCXJK1Lg'+key;
 
     var videoObjectItems = [];
     var htmlContent = '';
@@ -11,7 +11,6 @@
     .then(data => {
         videoObjectItems = data.items;
         for (const i of videoObjectItems) {
-            //console.log(i.snippet.thumbnails.default.url);
             htmlContent += `
                 <div class="video">
                     <div class="img">
