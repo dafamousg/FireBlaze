@@ -39,15 +39,15 @@
 }
 .video .img{
     width: 45%;
+    display: inline-block;
 }
 .video .title{
-    margin: auto;
     display: inline-block;
     width: 45%;
-    position: relative;
+    /* position: relative;
     top: 25%;
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
 }
 
 

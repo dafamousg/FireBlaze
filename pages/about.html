@@ -32,11 +32,9 @@
   
   <div class="container">
     <div class="artist">
-      <div class="col-1 img">
-        <img src="https://newscentral.africa/wp-content/uploads/2020/01/diamondplatnumz_79162903_2742907169098993_4629632408856351715_n-e1580463222676.jpg" width="200" height="200">
-      </div>
+      <div id="img" class="col-1 img"></div>
       <div class="col-2">
-        <h1>
+        <h1 id="artistName">
           {{Artist.Name}}
         </h1>
         <div class="header-Info">
@@ -53,7 +51,7 @@
     </div>
     <div class="videos">
       <h2>Videos</h2>   
-      <div id="test">
+      <div id="videoList">
 
       </div>
     </div>
@@ -61,6 +59,7 @@
 
     <div class="about">
       <h2>About {{Artist.Name}}</h2>
+      <div id="artistDesc"></div>
       <!--Call Spotify API to print About info-->
     </div>
 
