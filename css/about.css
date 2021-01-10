@@ -32,22 +32,42 @@
     transform: translateY(-50%);
 }
 
+#videoList{
+    /*width: 40%;*/
+}
+
 .video{
+    position: relative;
     overflow: hidden;
     border: 1px solid black;
     margin: 5px;
 }
 .video .img{
-    width: 45%;
     display: inline-block;
 }
-.video .title{
+.video .videoInfo{
     display: inline-block;
-    width: 45%;
-    /* position: relative;
-    top: 25%;
+    position: absolute;
+    /*top: 25%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); */
+}
+
+.videoInfo .top, .videoInfo .bottom{
+    display: block;
+    margin: 10px 5px;
+}
+
+.videoInfo span{
+    margin: 0 20px;
+}
+
+.videoInfo .lable{
+    font-weight: bolder;
+}
+
+.videoInfo #published{
+    font-size: x-small;
 }
 
 #artistDesc{

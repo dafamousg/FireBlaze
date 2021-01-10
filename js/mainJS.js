@@ -2,7 +2,7 @@
  * 4mgFQh3JoKWUtPNbCFrbEa
 */
 
-
+var key = '';
 var url = 'https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&id=UCdl8T8PPHJf141WYCXJK1Lg'+key;
 
 var logoImg;

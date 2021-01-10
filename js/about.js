@@ -1,5 +1,5 @@
 
- 
+    var key = '';
     var urlAccountInfo = 'https://www.googleapis.com/youtube/v3/channels?part=snippet&id=UCdl8T8PPHJf141WYCXJK1Lg'+key;
     var urlVideos = 'https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&maxResults=5&playlistId=UUdl8T8PPHJf141WYCXJK1Lg'+key;
     var urlVideoDetail = 'https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails,statistics&id=';
@@ -10,6 +10,9 @@
     var artistDescription;
     var artistName;
 
+    //getInfoFromYoutube();
+
+function getInfoFromYoutube(){
     Promise.all([
         fetch(urlAccountInfo),
         fetch(urlVideos)
@@ -39,13 +42,17 @@
                     htmlVideoListContent += `
                         <div class="video">
                             <div class="img">
-                            <img src="${video.snippet.thumbnails.default.url}" width="${video.snippet.thumbnails.default.width}" height="${video.snippet.thumbnails.default.height}">
+                                <img src="${video.snippet.thumbnails.default.url}" width="${video.snippet.thumbnails.default.width}" height="${video.snippet.thumbnails.default.height}">
                             </div>
-                            <div class="title">
-                            <span>${video.snippet.publishedAt}</span><br>
-                            <span>${video.snippet.title}</span><br>
-                            <span>Time: ${duration}</span><br>
-                            <span>Views: ${videoDetail.statistics.viewCount}</span>
+                            <div class="videoInfo">
+                                <div class="top">
+                                    <span id="title">${video.snippet.title}</span>
+                                    <span id="published">${video.snippet.publishedAt}</span>
+                                </div>
+                                <div class="bottom">
+                                    <p><span class="lable">Time: ${duration}</span>
+                                    <span class="lable">Views: ${videoDetail.statistics.viewCount}</span></p>
+                                </div>
                             </div>
                             <div>
                             </div>
@@ -63,7 +70,10 @@
         // if there's an error, log it
         console.log(error);
     });
-    
+}
+
+getInfoFromYoutube();
+
 function getVideoDetails(id, key = this.key){
     
 }
